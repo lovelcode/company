@@ -7,11 +7,28 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    container: {
+      center: true,
+      padding: "1rem"
+    },
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      backgroundImage: {},
+      fontFamily: {
+        // yekanbakh: "yekanbakh",
+        // cinema: "cinema",
+        cinema: ["var(--font-cinema)"],
+        yekanbakh: ["var(--font-yekanbakh)"],
+      },
+      colors: {
+        background: "#030712",
+        primery_orang: "#FFC828",
+        primery_red: "#E65526",
+        main_blue: "#5200FF",
+        main_dark: "#0E121E",
+        second_dark: "#090D18",
+        light_text: "#A9A9A9",
+        gray_text: "#ffffff70",
+        badge: "#808080",
       },
     },
   },
