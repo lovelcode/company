@@ -4,12 +4,12 @@ import { usePathname } from "next/navigation";
 import React from "react";
 export default function Menu() {
   const navLinks = [
-    { id: 1, title: "mainpage", href: "/" },
-    { id: 2, title: "portfolio", href: "/portfolio" },
-    { id: 3, title: "websitedesignfee", href: "/tariffs" },
-    { id: 4, title: "articles", href: "/articles" },
-    { id: 5, title: "aboutus", href: "/aboutus" },
-    { id: 6, title: "contactus", href: "/contactus" },
+    { id: 1, title: "صفحه اصلی", href: "/" },
+    { id: 2, title: "نمونه کارها", href: "/portfolio" },
+    { id: 3, title: "نمونه طراحی سایت", href: "/tariffs" },
+    { id: 4, title: "مقالات", href: "/articles" },
+    { id: 5, title: "درباره ما", href: "/aboutus" },
+    { id: 6, title: "تماس با ما", href: "/contactus" },
   ];
   const pathname = usePathname();
   const mainPathName = pathname.split("/")[2];
@@ -27,9 +27,9 @@ export default function Menu() {
                   ? "gradient-orange text-transparent bg-clip-text before:size-[2px] before:gradient-orange before:block relative before:absolute before:-top-px before:-right-1 before:rounded-full "
                   : ""
               }
-              href={`/${link.href}`}
+              href={`${link.href}`}
             >
-              {(link.title)}
+              {link.title}
             </Link>
           </li>
         ))}

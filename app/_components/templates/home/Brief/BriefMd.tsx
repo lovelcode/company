@@ -20,7 +20,7 @@ const BriefMd = () => {
                 <div className="absolute w-1/2 h-20 bg-second_dark rounded-[20px] right-1/4 -bottom-10 flex flex-col justify-center text-center">
                   <span className="text-[26px]">35</span>
                   <span className="text-sm ">
-                    {("asuccessfulprojectintheportfolioofthelovelcodeteam")}
+                    پروژه موفق در کارنامه تیم لاول کد
                   </span>
                 </div>
               </div>
@@ -31,33 +31,38 @@ const BriefMd = () => {
               <div className="title">
                 <div className="flex font-cinema text-[40px]">
                   <h2 className="gradient-orange text-transparent bg-clip-text">
-                    {("lovelcode")}
+                    لاول کد
                   </h2>
-                  <h2 className="">{("ataglance")}</h2>
+                  <h2 className="">در یک نگاه</h2>
                 </div>
                 <h2 className="font-light text-gray_text">
-                  {("weareleadersinpromotingonlinebusinesses")}
+                  تو ارتقا کسب و کار های انلاین پیشرو هستیم :)
                 </h2>
               </div>
-              <p className="text-lg ">{("lowellcodewasbuiltin1402")}</p>
-              <p className="text-lg ">{("briefdesc")}</p>
+              <p className="text-lg ">لاول کد در سال 1402 ساخته شد!</p>
+              <p className="text-lg ">
+                طی فعالیت در حوزه­ بازاریابی و برندینگ با افراد و کسب و کارهای
+                کوچک و متوسط زیادی برخورد داشتیم که به دریافت مشاوره و راهکار
+                جهت توسعه و بهبود بیزینس خود نیاز داشتند، پاسخگویی به این نیاز
+                در حوزه ی بازاریابی و برندینگ منجر به شکل گیری لاول کد شد.
+              </p>
             </div>
             <div className="down grid grid-cols-2 gap-x-20 gap-y-12">
               <BriefFeacher
                 src="/home/brief/magic.svg"
-                title="eyecatchingandexclusiveappearance"
+                title="پشتیبانی لحظه ای"
               ></BriefFeacher>
               <BriefFeacher
                 src="/home/brief/magic.svg"
-                title="instantsupport"
+                title="ظاهر چشم نواز و اختصاصی"
               ></BriefFeacher>
               <BriefFeacher
                 src="/home/brief/magic.svg"
-                title="standardwebsitedesign"
+                title="+2 سال سابقه کاری"
               ></BriefFeacher>
               <BriefFeacher
                 src="/home/brief/magic.svg"
-                title="+2yearsofworkexperience"
+                title="طراحی سایت استاندارد"
               ></BriefFeacher>
             </div>
           </div>
@@ -72,9 +77,12 @@ const BriefMd = () => {
           <div className="absolute top-0 left-0 w-full h-full bg-second_dark/90 flex justify-center items-center">
             <div className="z-10 text-center flex flex-col gap-[15px] px-8">
               <h3 className="text-[40px] font-normal font-cinema ">
-                {("phonetitle")}
+                شماره تلفن پشتیبانی لاول کد
               </h3>
-              <p className="font-light">{("phonedesc")}</p>
+              <p className="font-light">
+                ما منتظر تماس شما هستیم. ساعات پاسخگویی روزهای شنبه الی پنج شنبه
+                8.30 الی 21.00 می باشد.
+              </p>
               <p>09305712252</p>
             </div>
           </div>

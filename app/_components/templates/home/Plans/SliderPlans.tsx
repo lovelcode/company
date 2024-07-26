@@ -37,25 +37,25 @@ export default function SliderPlans() {
           }}
         >
           <SwiperSlide>
-            <Plan title="economicdesignplan"></Plan>
+            <Plan title="پلن طراحی VIP"></Plan>
           </SwiperSlide>
           <SwiperSlide>
-            <Plan title="economicdesignplan"></Plan>
+            <Plan title="پلن طراحی VIP"></Plan>
           </SwiperSlide>
           <SwiperSlide>
-            <Plan title="economicdesignplan"></Plan>
+            <Plan title="پلن طراحی VIP"></Plan>
           </SwiperSlide>
           <SwiperSlide>
-            <Plan title="economicdesignplan"></Plan>
+            <Plan title="پلن طراحی VIP"></Plan>
           </SwiperSlide>
           <SwiperSlide>
-            <Plan title="economicdesignplan"></Plan>
+            <Plan title="پلن طراحی VIP"></Plan>
           </SwiperSlide>
           <SwiperSlide>
-            <Plan title="economicdesignplan"></Plan>
+            <Plan title="پلن طراحی VIP"></Plan>
           </SwiperSlide>
           <SwiperSlide>
-            <Plan title="economicdesignplan"></Plan>
+            <Plan title="پلن طراحی VIP"></Plan>
           </SwiperSlide>
         </Swiper>
       </div>

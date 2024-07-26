@@ -8,13 +8,15 @@ export default function AddOrder() {
       <div className="flex justify-center text-center">
         <div className="title">
           <div className="md:flex font-cinema text-[30px] md:text-[40px] ">
-            <h1 className="">{("professionaldigitalagencymarketing")}</h1>
+            <h1 className="">
+              آژانــس حرفــه ای دیــــجیتـــــال مــــــارکـــتـیـنـگ
+            </h1>
             <h2 className="gradient-orange text-transparent bg-clip-text">
-              {("lovelcode")}
+              لاول کد
             </h2>
           </div>
           <h2 className="font-light text-xs text-gray_text md:text-base">
-            {("weareatthesideofsettingupyourvirtualbusiness")}
+            در کنار راه اندازی کسب و کار مجازی شما هستیم :)
           </h2>
         </div>
       </div>
@@ -27,7 +29,7 @@ export default function AddOrder() {
             bg="gradient"
             type="box7"
             href={"/"}
-            title={"placeanorderforwebsitedesign"}
+            title={"ثبت سفارش طراحی سایت"}
           ></Btn>
         </div>
         <div className="hidden md:flex text-[18px] shadow-btn">
@@ -35,7 +37,7 @@ export default function AddOrder() {
             bg="gradient"
             type="box2"
             href={"/"}
-            title={"placeanorderforwebsitedesign"}
+            title={"ثبت سفارش طراحی سایت"}
           ></Btn>
         </div>
       </div>
