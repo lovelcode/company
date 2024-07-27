@@ -7,7 +7,7 @@ import SocialMedias from '@/app/_components/templates/home/SocialMedias'
 export default function page() {
     return (
         <>
-            <Breadcrumb />
+            <Breadcrumb title='ارتباط با ما' />
             <ContactForm />
             <ContactDetail />
             <SocialMedias />
