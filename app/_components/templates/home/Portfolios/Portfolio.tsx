@@ -22,7 +22,7 @@ export default function Portfolio() {
             است. تیم ما افتخار همکاری با این مجموعه بین المللی را داشته است.
           </p>
         </div>
-        <Btn href={`/portfolio/mohammad`} bg="gradient" title="viewdetails" type="box8"></Btn>
+        <Btn href={`/portfolio/mohammad`} bg="gradient" title="مشاهده جزئیات" type="box8"></Btn>
       </div>
     </div>
   );
