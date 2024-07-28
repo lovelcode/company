@@ -5,7 +5,6 @@ import SliderPortfolios from "../../templates/home/Portfolios/SliderPortfolios";
 import Btn from "../Btn/Btn";
 import Image from "next/image";
 
-
 const PortfolioFilter = () => {
   return (
     <div>
@@ -50,7 +49,7 @@ const PortfolioFilter = () => {
             <div className="flex justify-center">
               <Btn
                 bg="gradient"
-                title="placeanorderforwebsitedesign"
+                title="ثبت مشاوره رایگان"
                 href=""
                 type="box5"
               ></Btn>
@@ -59,8 +58,11 @@ const PortfolioFilter = () => {
           <div className="flex justify-center">
             <div className="relative  h-[156px] mt-[65px] rounded-[22px] flex flex-col items-center gap-[15px] overflow-hidden justify-center">
               <div className="z-10 text-center flex flex-col gap-[15px] px-8">
-                <h3 className="text-2xl font-cinema ">{("phonetitle")}</h3>
-                <p className="text-xs font-light">{("phonedesc")}</p>
+                <h3 className="text-2xl font-cinema ">تماس با کارشناسان ما</h3>
+                <p className="text-xs font-light">
+                  ما منتظر تماس شما هستیم. ساعات پاسخگویی روزهای شنبه الی پنج
+                  شنبه 8.30 الی 21.00 می باشد.
+                </p>
                 <a href="tel:09305712252">09305712252</a>
               </div>
 

@@ -97,14 +97,14 @@ const page = () => {
             href="/"
             type="box6"
             bg="gradient"
-            title="placeanorderforwebsitedesign"
+            title="ثبت سفارش طراحی سایت"
           ></Btn>
           <Btn
             shadow
             href="/"
             type="box6"
             bg="background"
-            title="placeanorderforwebsitedesign"
+            title="مشاهده سایت آزاسیت"
           ></Btn>
         </div>
         <div className="mt-10">
