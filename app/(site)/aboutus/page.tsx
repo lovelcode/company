@@ -8,7 +8,7 @@ import React from "react";
 export default function AboutUs() {
     return (
         <>
-            <Breadcrumb />
+            <Breadcrumb title="درباره ما" />
             <CompanyInformation />
             <CompanyStory />
             <MembersIntroduction />
