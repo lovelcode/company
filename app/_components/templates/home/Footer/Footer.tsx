@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -18,11 +17,11 @@ export default function Footer() {
             <div className="absolute w-full h-full bg-black/90 top-0 left-0 -z-10"></div>
           </div>
           <div className="menu grid grid-cols-2 *:flex *:justify-center mt-9 gap-y-[30px] text-xs">
-            <Link href={"/"}>{("portfolio")}</Link>
-            <Link href={"/"}>{("websitedesignfee")}</Link>
-            <Link href={"/"}>{("articles")}</Link>
-            <Link href={"/"}>{("aboutus")}</Link>
-            <Link href={"/"}>{("contactus")}</Link>
+            <Link href={"/"}>نمونه کارها</Link>
+            <Link href={"/"}>تماس با ما</Link>
+            <Link href={"/"}>تعرفه طراحی سایت</Link>
+            <Link href={"/"}>مقالات</Link>
+            <Link href={"/"}>درباره ما</Link>
           </div>
           <Image
             className="absolute top-0 left-0 blur-sm -z-20"
@@ -45,7 +44,6 @@ export default function Footer() {
             height={115}
           ></Image>
         </div>
-       
       </div>
 
       <div className="relative hidden md:flex justify-between items-center px-[60px] py-10 mt-[100px] overflow-hidden">
@@ -64,11 +62,11 @@ export default function Footer() {
             height={43.71}
           ></Image>
           <div className="menu flex gap-4 lg:gap-9 text-sm">
-            <Link href={"/"}>{("portfolio")}</Link>
-            <Link href={"/"}>{("websitedesignfee")}</Link>
-            <Link href={"/"}>{("articles")}</Link>
-            <Link href={"/"}>{("aboutus")}</Link>
-            <Link href={"/"}>{("contactus")}</Link>
+            <Link href={"/"}>نمونه کارها</Link>
+            <Link href={"/"}>تماس با ما</Link>
+            <Link href={"/"}>تعرفه طراحی سایت</Link>
+            <Link href={"/"}>مقالات</Link>
+            <Link href={"/"}>{"contactus"}</Link>
           </div>
         </div>
         <div className="l">
@@ -87,11 +85,10 @@ export default function Footer() {
             ></Image>
           </div>
         </div>
-      
       </div>
       <div className="p flex py-6 justify-center text-white/40 text-xs bg-background">
-          {("copy")}
-        </div>
+        تمام حقوق محفوظ است © 2024 - لاول کد.
+      </div>
     </>
   );
 }
