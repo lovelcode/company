@@ -4,7 +4,6 @@ import Image from "next/image";
 import React from "react";
 
 const page = () => {
-  
   return (
     <>
       <div className="mt-28 container">
@@ -68,9 +67,12 @@ const page = () => {
           <div className="absolute top-0 left-0 w-full h-full bg-second_dark/90 flex justify-center items-center">
             <div className="z-10 text-center flex flex-col gap-[15px] px-8">
               <h3 className="text-[40px] font-normal font-cinema ">
-                {("phonetitle")}
+                شماره تلفن پشتیبانی لاول کد
               </h3>
-              <p className="font-light">{("phonedesc")}</p>
+              <p className="font-light">
+                ما منتظر تماس شما هستیم. ساعات پاسخگویی روزهای شنبه الی پنج شنبه
+                8.30 الی 21.00 می باشد.
+              </p>
               <p>09305712252</p>
             </div>
           </div>
