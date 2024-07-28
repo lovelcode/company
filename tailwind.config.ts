@@ -22,6 +22,7 @@ const config: Config = {
       colors: {
         background: "#030712",
         primery_orang: "#FFC828",
+        main_red:"#F83600",
         primery_red: "#E65526",
         main_blue: "#5200FF",
         main_dark: "#0E121E",
