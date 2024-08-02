@@ -1,8 +1,11 @@
 "use client";
+import { FeaturesOfThePlanProps } from "@/app/_types/types";
+import { plans } from "@/data/plans";
 import React, { useState } from "react";
 
-const FeaturesOfThePlan = () => {
+const FeaturesOfThePlan: React.FC<FeaturesOfThePlanProps> = ({ id }) => {
   const [isShow, setIsShow] = useState(true);
+  const mainPlan = plans?.filter((plan) => plan.id === id)[0];
   return (
     <div className="relative mt-20">
       <h2 className="title  font-cinema text-3xl text-center py">
@@ -10,7 +13,7 @@ const FeaturesOfThePlan = () => {
       </h2>
       <div className="items mt-10">
         <h3 className="flex justify-center bg-[#5200FF]/10 py-5 text-sm rounded-t-[20px] ">
-          پلن طراحی پایه
+          {mainPlan.title}
         </h3>
         <ul
           className={`md:h-full md:grid md:grid-cols-2 md:gap-x-10 md:px-10 lg:px-20 lg:gap-x-40  px-5 flex flex-col gap-4 p-10 pb-20 text-sm bg-second_dark rounded-b-[20px] ${

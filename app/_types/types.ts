@@ -39,3 +39,8 @@ export interface SocialmediaProps {
   iconsm: string;
   iconmd: string;
 }
+export interface FeaturesOfThePlanProps {
+  id: number;
+}
+
+

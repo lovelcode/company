@@ -6,8 +6,9 @@ import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
 import Image from "next/image";
 import React from "react";
 
-const page = ({params}:Params) => {
-  const plan = plans.find((plan)=>plan.id === Number(params.tariffsSlug))
+const page = ({ params }: Params) => {
+  const id = +params.tariffsSlug;
+  const mainPlan = plans?.filter((plan) => plan.id === id)[0];
   return (
     <>
       <div className="container mt-16">
@@ -56,11 +57,11 @@ const page = ({params}:Params) => {
                 d="M15.75 19.5 8.25 12l7.5-7.5"
               />
             </svg>
-            <span className="text-xs">تعرفه پلن طراحی پایه</span>
+            <span className="text-xs">تعرفه {mainPlan.title}</span>
           </div>
         </div>
         <div className="relative header px-5 flex flex-col items-center gap-6 mt-20">
-          <h1 className="text-3xl font-cinema">تعرفه پلن طراحی پایه</h1>
+          <h1 className="text-3xl font-cinema">تعرفه {mainPlan.title}</h1>
           <div className="flex gap-4 md:bg-second_dark shadow-md md:mt-10">
             <Image
               alt="نمونه کار های لاولکد"
@@ -83,7 +84,7 @@ const page = ({params}:Params) => {
           <Player></Player>
         </div>
         <div>
-          <FeaturesOfThePlan></FeaturesOfThePlan>
+          <FeaturesOfThePlan id={id}></FeaturesOfThePlan>
         </div>
         <div className="mt-5 flex flex-col gap-5 lg:flex-row justify-center items-center">
           <Btn
