@@ -8,7 +8,7 @@ export default function SliderPlansMd() {
         {
           plans.map((plan)=>(
             <div key={plan.id}>
-              <Plan href={`/tariffs/${plan.id}`} title={plan.title}></Plan>
+              <Plan options={plan.options} price={plan.price} href={`/tariffs/${plan.id}`} title={plan.title}></Plan>
             </div>
           ))
         }

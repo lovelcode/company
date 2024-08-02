@@ -39,7 +39,7 @@ export default function SliderPlans() {
         >
           {plans.map((plan) => (
             <SwiperSlide key={plan.id}>
-              <Plan href={`/${plan.id}`} title={plan.title}></Plan>
+              <Plan options={plan.options} price={plan.price} href={`/${plan.id}`} title={plan.title}></Plan>
             </SwiperSlide>
           ))}
         </Swiper>

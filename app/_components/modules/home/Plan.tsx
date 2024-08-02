@@ -1,9 +1,11 @@
 import React from "react";
-import FeaturesPlan from "./FeaturesPlan";
 import Btn from "../Btn/Btn";
 import { PlanProps } from "@/app/_types/types";
+import Image from "next/image";
 
-const Plan: React.FC<PlanProps> = ({ title, href }) => {
+const Plan: React.FC<PlanProps> = ({ title, href, price, options }) => {
+  const starts1 = new Array(options.option1).fill(0);
+  const starts2 = new Array(options.option2).fill(0);
   return (
     <div className="flex justify-center">
       <div className=" mt-10 px-5 pb-5 bg-second_dark w-[273px] border-[1px] rounded-[20px]">
@@ -13,50 +15,82 @@ const Plan: React.FC<PlanProps> = ({ title, href }) => {
           </span>
         </div>
         <div className="mt-6 text-xs flex flex-col gap-5">
-          <FeaturesPlan
-            width={18}
-            height={18}
-            count={4}
-            src="/home/plans/star.svg"
-            title={"سرعت سایت :"}
-          ></FeaturesPlan>
-          <FeaturesPlan
-            width={18}
-            height={18}
-            count={2}
-            src="/home/plans/star.svg"
-            title={"قابلیت سفارشی سازی :"}
-          ></FeaturesPlan>
-          <FeaturesPlan
-            width={18}
-            height={18}
-            count={1}
-            src="/home/plans/check.svg"
-            title={"سئو تکنیکال"}
-          ></FeaturesPlan>
-          <FeaturesPlan
-            width={18}
-            height={18}
-            count={1}
-            src="/home/plans/check.svg"
-            title={"تغییر رنگ به سلیقه شما"}
-          ></FeaturesPlan>
-          <FeaturesPlan
-            width={18}
-            height={18}
-            count={1}
-            src="/home/plans/check.svg"
-            title={"اموزش کامل پنل کاربری :"}
-          ></FeaturesPlan>
-          <FeaturesPlan
-            title={"پشتیبانی رایگان :"}
-            text="12 ماهه"
-          ></FeaturesPlan>
-          <FeaturesPlan title={": UI / UX"} text="اختصاصی"></FeaturesPlan>
-          <FeaturesPlan title={"زمان اجرا :"} text="10 روز کاری"></FeaturesPlan>
+          <div className="flex justify-between">
+            <h5 className="">سرعت سایت:</h5>
+            <div className="flex gap-2">
+              {starts1.map(() => (
+                <Image
+                  alt=""
+                  src={`/home/plans/star.svg`}
+                  width={14}
+                  height={14}
+                ></Image>
+              ))}
+            </div>
+          </div>
+          <div className="flex justify-between">
+            <h5 className="">قابلیت سفارشی سازی:</h5>
+            <div className="flex gap-2">
+              {starts2.map(() => (
+                <Image
+                  alt=""
+                  src={`/home/plans/star.svg`}
+                  width={14}
+                  height={14}
+                ></Image>
+              ))}
+            </div>
+          </div>
+          <div className="flex justify-between">
+            <h5 className="">سئو تکنیکال</h5>
+            <div className="">
+              <Image
+                alt=""
+                src={`/home/plans/check.svg`}
+                width={14}
+                height={14}
+              ></Image>
+            </div>
+          </div>
+          <div className="flex justify-between">
+            <h5 className="">تغییر رنگ به سلیقه شما</h5>
+            <div className="">
+              <Image
+                alt=""
+                src={`/home/plans/check.svg`}
+                width={14}
+                height={14}
+              ></Image>
+            </div>
+          </div>
+          <div className="flex justify-between">
+            <h5 className="">اموزش کامل پنل کاربری :</h5>
+            <div className="">
+              <Image
+                alt=""
+                src={`/home/plans/check.svg`}
+                width={14}
+                height={14}
+              ></Image>
+            </div>
+          </div>
+          <div className="flex justify-between">
+            <h5 className="">پشتیبانی رایگان :</h5>
+            <span>{options.option6} ماه</span>
+          </div>
+          <div className="flex justify-between">
+            <h5 className="">: UI / UX</h5>
+            <span>آماده</span>
+          </div>
+          <div className="flex justify-between">
+            <h5 className="">زمان اجرا :</h5>
+            <span>{options.option8} روزکاری</span>
+          </div>
         </div>
         <div className="flex mt-[30px] items-center justify-center gap-2 ">
-          <span className="text-sm">شروع قیمت از : 10 </span>
+          <span className="text-sm">
+            شروع قیمت از : <span className="text-3xl">{price}</span>{" "}
+          </span>
           <div className="flex flex-col">
             <span className="text-[10px]">میلیون</span>
             <span className="text-[10px]">تومان</span>

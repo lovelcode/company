@@ -14,18 +14,20 @@ export interface ButtonProps {
   href: string;
   shadow?: boolean;
 }
-
-export interface FeaturesPlanProps {
-  count?: number;
-  title?: string;
-  src?: string;
-  width?: number;
-  height?: number;
-  text?: string;
-}
 export interface PlanProps {
   title?: string;
   href: string;
+  price: number;
+  options: {
+    option1: number;
+    option2: number;
+    option3: boolean;
+    option4: boolean;
+    option5: boolean;
+    option6: number;
+    option7: boolean;
+    option8: number;
+  };
 }
 export interface BriefFeacherProps {
   title?: string;
