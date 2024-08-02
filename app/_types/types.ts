@@ -25,6 +25,7 @@ export interface FeaturesPlanProps {
 }
 export interface PlanProps {
   title?: string;
+  href: string;
 }
 export interface BriefFeacherProps {
   title?: string;
@@ -33,6 +34,6 @@ export interface BriefFeacherProps {
 export interface SocialmediaProps {
   title: string;
   bg: string;
-iconsm:string
-  iconmd:string
+  iconsm: string;
+  iconmd: string;
 }

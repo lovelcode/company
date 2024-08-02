@@ -1,10 +1,11 @@
-"use client"
-import Plan from '@/app/_components/modules/home/Plan'
-import React from 'react'
-import { Autoplay } from 'swiper/modules'
-import { Swiper, SwiperSlide } from 'swiper/react'
+"use client";
+import Plan from "@/app/_components/modules/home/Plan";
+import React from "react";
+import { Autoplay } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
+import { plans } from "@/data/plans";
 export default function SliderPlans() {
   return (
     <div>
@@ -36,29 +37,13 @@ export default function SliderPlans() {
             },
           }}
         >
-          <SwiperSlide>
-            <Plan title="پلن طراحی VIP"></Plan>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Plan title="پلن طراحی VIP"></Plan>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Plan title="پلن طراحی VIP"></Plan>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Plan title="پلن طراحی VIP"></Plan>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Plan title="پلن طراحی VIP"></Plan>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Plan title="پلن طراحی VIP"></Plan>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Plan title="پلن طراحی VIP"></Plan>
-          </SwiperSlide>
+          {plans.map((plan) => (
+            <SwiperSlide key={plan.id}>
+              <Plan href={`/${plan.id}`} title={plan.title}></Plan>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </div>
-  )
+  );
 }

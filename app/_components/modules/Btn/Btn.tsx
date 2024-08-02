@@ -31,8 +31,11 @@ const Btn: React.FC<ButtonProps> = ({ title, bg, type, href, shadow }) => {
           : ""
       } flex justify-center items-center ${shadow ? "shadow-btn" : ""}`}
     >
-      <Link href={href} className="text-center text-xs md:text-base">
-        {(title)}
+      <Link
+        href={href}
+        className="text-center text-xs md:text-base w-full h-full flex justify-center items-center"
+      >
+        {title}
       </Link>
     </div>
   );

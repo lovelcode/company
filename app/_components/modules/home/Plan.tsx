@@ -3,7 +3,7 @@ import FeaturesPlan from "./FeaturesPlan";
 import Btn from "../Btn/Btn";
 import { PlanProps } from "@/app/_types/types";
 
-const Plan: React.FC<PlanProps> = ({ title }) => {
+const Plan: React.FC<PlanProps> = ({ title, href }) => {
   return (
     <div className="flex justify-center">
       <div className=" mt-10 px-5 pb-5 bg-second_dark w-[273px] border-[1px] rounded-[20px]">
@@ -63,7 +63,7 @@ const Plan: React.FC<PlanProps> = ({ title }) => {
           </div>
         </div>
         <div className="mt-3">
-          <Btn bg="gradient" href="tariffs/mohammad" title="مشاهده پلن" type="box6"></Btn>
+          <Btn bg="gradient" href={href} title="مشاهده پلن" type="box6"></Btn>
         </div>
       </div>
     </div>
