@@ -1,10 +1,13 @@
 import Btn from "@/app/_components/modules/Btn/Btn";
 import FeaturesOfThePlan from "@/app/_components/modules/tariffs/FeaturesOfThePlan";
 import Player from "@/app/_components/templates/home/Player";
+import { plans } from "@/data/plans";
+import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
 import Image from "next/image";
 import React from "react";
 
-const page = () => {
+const page = ({params}:Params) => {
+  const plan = plans.find((plan)=>plan.id === Number(params.tariffsSlug))
   return (
     <>
       <div className="container mt-16">

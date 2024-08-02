@@ -2,10 +2,10 @@ import Btn from "@/app/_components/modules/Btn/Btn";
 import MainFeaturesSite from "@/app/_components/modules/porfolio/MainFeaturesSite";
 import ShowPortfolioMobile from "@/app/_components/modules/porfolio/ShowPortfolioMobile";
 import ShowPortfolioPc from "@/app/_components/modules/porfolio/ShowPortfolioPc";
-import Image from "next/image";
+import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
 import React from "react";
 
-const page = () => {
+const page = ({params}:Params) => {
   return (
     <div className="container mt-16">
       <div className="bredcromp">
