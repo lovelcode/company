@@ -9,6 +9,7 @@ import React from "react";
 const page = ({ params }: Params) => {
   const id = +params.tariffsSlug;
   const mainPlan = plans?.filter((plan) => plan.id === id)[0];
+
   return (
     <>
       <div className="container mt-16">
@@ -77,7 +78,7 @@ const page = ({ params }: Params) => {
             </div>
           </div>
           <h2 className="absolute -top-10 text-3xl bg-gradient-to-b from-[#FFFFFF] to-[#030712] text-transparent bg-clip-text font-bold opacity-20">
-            Basic design plan tariff
+            {mainPlan.titleEn}
           </h2>
         </div>
         <div>

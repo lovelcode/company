@@ -3,6 +3,8 @@ import { plansType } from "./types";
 export const plans: plansType = [
   {
     id: 1,
+    video: "",
+    titleEn: "Basic design plan tariff",
     title: "پلن طراحی پایه",
     options: {
       option1: 4,
@@ -18,6 +20,8 @@ export const plans: plansType = [
   },
   {
     id: 2,
+    video: "",
+    titleEn: "Professional design plan",
     title: "پلن طراحی حرفه ای",
     options: {
       option1: 5,
@@ -33,6 +37,8 @@ export const plans: plansType = [
   },
   {
     id: 3,
+    video: "",
+    titleEn: "VIP design plan",
     title: "پلن طراحی VIP",
     options: {
       option1: 5,
@@ -48,6 +54,8 @@ export const plans: plansType = [
   },
   {
     id: 4,
+    video: "",
+    titleEn: "ELITE design",
     title: "طراحی الیت ELITE",
     options: {
       option1: 5,

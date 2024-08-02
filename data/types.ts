@@ -1,6 +1,7 @@
 export type plansType = {
   id: number;
   title: string;
+  titleEn: string;
   options: {
     option1: number;
     option2: number;
@@ -12,4 +13,5 @@ export type plansType = {
     option8: number;
   };
   price: number;
+  video: string;
 }[];
