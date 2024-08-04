@@ -12,7 +12,8 @@ export default function Menu() {
     { id: 6, title: "تماس با ما", href: "/contactus" },
   ];
   const pathname = usePathname();
-  const mainPathName = pathname.split("/")[2];
+  const mainPathName = pathname.split("/")[1];
+  
 
   return (
     <div>
@@ -28,6 +29,7 @@ export default function Menu() {
                   : ""
               }
               href={`${link.href}`}
+              key={link.id}
             >
               {link.title}
             </Link>

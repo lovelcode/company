@@ -24,6 +24,7 @@ const Plan: React.FC<PlanProps> = ({ title, href, price, options }) => {
                   src={`/home/plans/star.svg`}
                   width={14}
                   height={14}
+                  key={crypto.randomUUID()}
                 ></Image>
               ))}
             </div>
@@ -37,6 +38,7 @@ const Plan: React.FC<PlanProps> = ({ title, href, price, options }) => {
                   src={`/home/plans/star.svg`}
                   width={14}
                   height={14}
+                  key={crypto.randomUUID()}
                 ></Image>
               ))}
             </div>
