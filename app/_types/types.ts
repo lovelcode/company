@@ -44,3 +44,22 @@ export interface FeaturesOfThePlanProps {
 }
 
 
+export interface Feature {
+  id: number;
+  title: string;
+  addLink: string;
+  editLink: string;
+}
+
+export interface ApplicationArr {
+  id: number;
+  title: string;
+  Link: string;
+  allFeaturesApp: Feature[];
+}
+
+export interface ApplicationProps {
+  title: string;
+  link: string;
+  allFeaturesApp: Feature[];
+}
