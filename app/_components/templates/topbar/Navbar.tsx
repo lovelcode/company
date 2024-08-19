@@ -4,6 +4,7 @@ import AdsMd from "./AdsMd";
 import Menu from "./Menu";
 import Image from "next/image";
 import HamberMenu from "../home/HamberMenu";
+import Link from "next/link";
 export default function Navbar() {
   const [isShow, setIsShow] = useState(false);
   return (
@@ -27,14 +28,14 @@ export default function Navbar() {
         <div className="flex items-center gap-3 mt-16 h-fit">
           <span className="w-px h-7 bg-white/15 hidden md:block"></span>
           <div className="  rounded-full size-10 bg-white/10 flex justify-center items-center">
-            <div className="rounded-full size-7 bg-background flex justify-center items-center">
+            <Link href='/admin' className="rounded-full size-7 bg-background flex justify-center items-center">
               <Image
                 width={10.91}
                 height={12.36}
                 src="/navbar/user.svg"
                 alt=""
               />
-            </div>
+            </Link>
           </div>
         </div>
       </div>

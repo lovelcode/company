@@ -2,8 +2,13 @@ import React from "react";
 import TitleHeader from "../_components/panel/TitleHeader";
 import Applications from "../_components/panel/Applications";
 import RecentActivities from "../_components/panel/RecentActivities";
+import { redirect } from "next/navigation";
 
 const page = () => {
+  const isAdmin = false
+  if(!isAdmin){
+    redirect('/admin/login')
+  }
   return (
     <>
       <div className="p-5">
