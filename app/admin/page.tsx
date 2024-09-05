@@ -5,7 +5,7 @@ import RecentActivities from "../_components/panel/RecentActivities";
 import { redirect } from "next/navigation";
 
 const page = () => {
-  const isAdmin = false
+  const isAdmin = true
   if(!isAdmin){
     redirect('/admin/login')
   }
