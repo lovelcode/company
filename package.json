@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.5.15",
     "bootstrap-icons": "^1.11.3",
     "ckeditor4-react": "^5.2.0",
     "jodit": "^4.2.27",

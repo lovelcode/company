@@ -5,8 +5,12 @@ import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { plans } from "@/data/plans";
-export default function SliderPlans() {
+import { PlanProps } from "@/app/_types/types";
+// import { plans } from "@/data/plans";
+export default async function SliderPlans() {
+  const res = await fetch("http://91.107.138.134:8008/api/plan/list/", {cache: "no-store"});
+    const plans = await res.json();
+    console.log(plans);
   return (
     <div>
       <div className="md:hidden">
@@ -37,9 +41,9 @@ export default function SliderPlans() {
             },
           }}
         >
-          {plans.map((plan) => (
+          {plans.map((plan:PlanProps) => (
             <SwiperSlide key={plan.id}>
-              <Plan options={plan.options} price={plan.price} href={`/${plan.id}`} title={plan.title}></Plan>
+              <Plan backup={plan.backup}  custom_color customization={plan.customization} delivery_time={plan.delivery_time} learning_program name={plan.name} seo speed={plan.speed} price={plan.price} href={`/${plan.id}`} ></Plan>
             </SwiperSlide>
           ))}
         </Swiper>

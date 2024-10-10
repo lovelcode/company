@@ -14,20 +14,21 @@ export interface ButtonProps {
   href: string;
   shadow?: boolean;
 }
+
+
+
 export interface PlanProps {
-  title?: string;
-  href: string;
-  price: number;
-  options: {
-    option1: number;
-    option2: number;
-    option3: boolean;
-    option4: boolean;
-    option5: boolean;
-    option6: number;
-    option7: boolean;
-    option8: number;
-  };
+  id?:number
+  href: string,
+  name: string,
+  speed: string,
+  customization: string,
+  seo: boolean,
+  custom_color: boolean,
+  learning_program: boolean,
+  backup: string,
+  delivery_time: number,
+  price: number
 }
 export interface BriefFeacherProps {
   title?: string;
