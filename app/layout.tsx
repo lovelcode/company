@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import localFont from "next/font/local";
 import "./globals.css";
-import "bootstrap-icons/font/bootstrap-icons.min.css"
+// import "bootstrap-icons/font/bootstrap-icons.min.css"
 const yekanbakh = localFont({
   src: [
     {

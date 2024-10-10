@@ -1,8 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { useRouter } from 'next/router';
 
-export default function page() {
+
+export default async function page({ params }: any) {
+  const { articleSlug } = params; // دسترسی به پارامتر slug
+
+  const res = await fetch(`http://91.107.138.134:8008/api/article/detail/${articleSlug}/`);
+  const data = await res.json();
+  console.log(data);
+
   return (
     <div className="mt-16">
       <div className="container">
@@ -41,7 +49,7 @@ export default function page() {
           <div className="grid grid-cols-7 gap-6">
             <div className="col-span-7 lg:col-span-5 p-6 bg-main_dark rounded-xl flex flex-col gap-8">
               <h1 className="text-lg font-bold">
-                شکایت صرافی کوین بیس(Coinbase) از SEC!
+                {data.title}
               </h1>
               <div className="flex items-center gap-8">
                 <div className="flex gap-1 items-center text-[10px] lg:text-xs">
@@ -59,7 +67,9 @@ export default function page() {
                       d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
                     />
                   </svg>
-                  <span>علیرضا رضایی</span>
+                  <span>
+                    {data.user}
+                  </span>
                 </div>
                 <div className="flex gap-1 items-center text-[10px] lg:text-xs">
                   <svg
@@ -93,19 +103,20 @@ export default function page() {
                       d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"
                     />
                   </svg>
-                  <span>1403/04/14</span>
+                  <span>{new Date(data.created_at).toLocaleDateString('fa-IR')}</span>
                 </div>
               </div>
               <div className="rounded-xl overflow-hidden">
-                <Image
+                {/* <Image
                   src={"/articles/3.png"}
                   alt=""
                   width={1000}
                   height={1000}
-                />
+                /> */}
+                <img src={`http://91.107.138.134:8008${data.image}`} alt="" />
               </div>
-              <div className="">
-                <h2 className="font-bold mb-4 text-lg">مقدمه:</h2>
+              <div className="" dangerouslySetInnerHTML={{ __html: data.content }}>
+                {/* <h2 className="font-bold mb-4 text-lg">مقدمه:</h2>
                 <p className="mb-4">
                   در صفحه اصلی بازی تلگرامی بلوم (BLUM)، پیامی با نوشته بلوم
                   توسط پوکراس لامپوس هک شده است ظاهر شد. با این حال، بازی بدون
@@ -133,7 +144,7 @@ export default function page() {
                   کاربران و جلب توجه رسانه‌ها کمک کند. در نهایت، هدف از این
                   اقدام هرچه باشد، موفق به جلب توجه زیادی شده و بحث‌های فراوانی
                   را در فضای مجازی به راه انداخته است.
-                </p>
+                </p> */}
               </div>
               <div className="bg-background rounded-lg p-4 flex items-center justify-between">
                 <h5>چه امتیازی رو برای این مقاله در نظر داری؟</h5>
@@ -242,7 +253,9 @@ export default function page() {
                   />
                 </svg>
                 <span>تاریخ بروز رسانی :</span>
-                <span>۱۵ تیر ۱۴۰۳ / ۱۷:۴۴</span>
+                <span>
+                  {new Date(data.updated_at).toLocaleDateString('fa-IR')}
+                </span>
               </div>
             </div>
             <div className="col-span-2 p-4 bg-main_dark rounded-xl flex-col gap-6 h-fit sticky top-2 hidden lg:flex">
