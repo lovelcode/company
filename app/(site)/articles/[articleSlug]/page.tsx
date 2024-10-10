@@ -7,7 +7,7 @@ import { useRouter } from 'next/router';
 export default async function page({ params }: any) {
   const { articleSlug } = params; // دسترسی به پارامتر slug
 
-  const res = await fetch(`http://91.107.138.134:8008/api/article/detail/${articleSlug}/`);
+  const res = await fetch(`http://91.107.138.134:8008/api/article/detail/${articleSlug}/`, {cache: "no-store"});
   const data = await res.json();
   console.log(data);
 

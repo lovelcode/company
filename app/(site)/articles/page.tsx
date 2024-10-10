@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 export default async function Articles() {
 
-    const res = await fetch("http://91.107.138.134:8008/api/article/list/");
+    const res = await fetch("http://91.107.138.134:8008/api/article/list/", {cache: "no-store"});
     const data = await res.json();
     console.log(data);
 
